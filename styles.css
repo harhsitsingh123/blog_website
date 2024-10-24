@@ -1,0 +1,305 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Main Header Styling */
+.main-header {
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    padding: 20px 0;
+    color: #fff;
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+
+/* Navigation Menu */
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul li {
+    list-style: none;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover, 
+.nav-menu ul li a.active {
+    background: #362781;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+/* Menu Toggle Button for Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: #fff;
+    height: 3px;
+    margin: 4px 0;
+    width: 25px;
+    transition: 0.4s;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        background: #4a90e2;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .nav-menu.active ul {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+
+/* Hero Section style */
+
+/* Featured Section Styling */
+.featured {
+    position: relative;
+    background: url('images/featured.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+}
+
+.featured-content {
+    position: relative;
+    max-width: 800px;
+    z-index: 1;
+}
+
+.featured-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.featured-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.featured-content .btn {
+    background: #1093aa;
+    color: #10393f;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.featured-content .btn:hover {
+    background: #4a90e2;
+    color: #ffe600;
+}
+
+
+/* Recent Blog Post Style */
+
+
+/* Recent Blog Posts Section Styling */
+.recent-posts {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.recent-posts h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.post-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.post-content .post-date {
+    display: block;
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.post-content .btn {
+    background: #4a90e2;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.post-content .btn:hover {
+    background: #ffe600;
+    color: #4a90e2;
+}
+
+
+/* Sidebar Styles */
+
+/* Footer Styling */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Back to Top Button Styling */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #E74C3C; /* Coral */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+}
+
+.back-to-top:hover {
+    background-color: #C0392B; /* Darker Coral on hover */
+}
+
+
+/* Date style */
+
+/* Current Date Styling */
+#currentDate {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #B0BEC5; /* Light Gray or any color that fits your theme */
+}

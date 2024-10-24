@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My  Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">My<span>Blog</span></div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="featured">
+        <div class="featured-content">
+            <h1>Welcome to My Blog</h1>
+            <p>Explore insightful articles, tips, and stories on technology, lifestyle, and more. Dive in to discover
+                knowledge and inspiration.</p>
+            
+        </div>
+    </section>
+
+    <section class="recent-posts">
+        <h2>Recent Blog Posts</h2>
+        <div class="posts-grid">
+            <article class="post-card">
+                <img src="image 1.jpg" alt="Blog Post 1">
+                <div class="post-content">
+                    <h3>Understanding CSS Flexbox</h3>
+                    <p>Learn the power of CSS Flexbox with examples and create responsive layouts with ease.</p>
+                    <span class="post-date">October 24, 2024</span>
+                    <a href="post-1.html" class="btn">Read More</a>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="image2.jpg" alt="Blog Post 2">
+                <div class="post-content">
+                    <h3>Mastering JavaScript Basics</h3>
+                    <p>Kickstart your JavaScript journey with fundamental concepts and practical examples.</p>
+                    <span class="post-date">October 18, 2024</span>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="images3.jpg" alt="Blog Post 3">
+                <div class="post-content">
+                    <h3>The Future of Web Development</h3>
+                    <p>Explore the latest trends and technologies shaping the future of web development.</p>
+                    <span class="post-date">October 10, 2024</span>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="image4.jpg" alt="Blog Post 4">
+                <div class="post-content">
+                    <h3>Top 10 HTML Tips and Tricks</h3>
+                    <p>Enhance your HTML skills with these essential tips and tricks for better coding.</p>
+                    <span class="post-date">October 5, 2024</span>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="image5.jpg" alt="Blog Post 5">
+                <div class="post-content">
+                    <h3>Exploring Python Libraries</h3>
+                    <p>Discover the most popular Python libraries that can elevate your programming skills.</p>
+                    <span class="post-date">September 28, 2024</span>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="image6.jpg" alt="Blog Post 6">
+                <div class="post-content">
+                    <h3>Introduction to Responsive Design</h3>
+                    <p>Learn the principles of responsive design to ensure your website looks great on all devices.</p>
+                    <span class="post-date">September 22, 2024</span>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="image7.jpg" alt="Blog Post 7">
+                <div class="post-content">
+                    <h3>Building RESTful APIs with Node.js</h3>
+                    <p>Step-by-step guide to creating RESTful APIs using Node.js and Express.</p>
+                    <span class="post-date">September 15, 2024</span>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="image8.jpg" alt="Blog Post 8">
+                <div class="post-content">
+                    <h3>Understanding Git and Version Control</h3>
+                    <p>A comprehensive introduction to Git and best practices for version control.</p>
+                    <span class="post-date">September 10, 2024</span>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="image9.jpg" alt="Blog Post 9">
+                <div class="post-content">
+                    <h3>Effective Debugging Techniques</h3>
+                    <p>Learn essential debugging techniques that will help you solve coding issues efficiently.</p>
+                    <span class="post-date">September 5, 2024</span>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Your Blog Name. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <p id="currentDate"></p> <!-- Placeholder for the current date -->
+        </div>
+    </footer>
+
+
+    <button id="backToTop" class="back-to-top">Back to Top</button>
+
+
+
+
+    <script>
+        // Get the button
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show the button when the user scrolls down 200px from the top of the document
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // When the user clicks the button, scroll to the top of the document smoothly
+        backToTopButton.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll to the top
+            });
+        };
+
+
+
+        // Get the current date and format it
+        const currentDate = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Display the current date in the footer
+        document.getElementById('currentDate').textContent = `Today's Date: ${currentDate}`;
+
+    </script>
+
+
+
+</body>
+
+</html>
